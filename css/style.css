@@ -1,0 +1,208 @@
+body{
+    font-family: "Poppins" , serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+
+}
+
+header{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+    text-decoration: underline;
+}
+
+.nav_links a:visited{
+    color: blue;
+
+}
+
+.card > header{
+    background: #288088;
+    border: solid 2px #45ADAD;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+
+}
+.pricing{
+    display: flex;
+    justify-content: center;
+   align-items: center; 
+   flex-wrap: wrap;
+
+}
+
+.card {
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    flex: 1 1 450px;
+    display: flex;
+    flex-direction: column; 
+    max-width: 450px;
+}
+
+
+.gallery img{
+    border: solid 10px #50C7C7;
+    margin: 10px;
+    width: 300px;
+
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*
+Edit the css for the card class to match our example. Achieve this by using a flex-property to specify an initial “size” of 450px.  You need to think about this from a “flex” perspective and realize that flex-direction will affect the size of the elements.  You can see that in the mobile view they all have the same width. 
+
+
+Edit the css for the pricing class to match our example. You should use flex and the cards should be centered both horizontally and vertically.
+
+
+Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px.  
+
+Edit the css for the gallery class to use flex to match our example. (You may want to look at the screen shots from 1200px and 1500px as well -  the changes are not from media queries, but from the use of flex.)
+*/
+
+
+
+#logo{
+    animation: smalltobig 5s linear;
+}
+@keyframes smalltobig {
+    0%   {width: 25px;}
+   100% {width: 475px;}
+}
+
+
+@media screen and (min-width: 900px) {
+  
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+       
+    }
+
+    .nav_links {
+        flex-direction: row;
+        gap: 20px; 
+    }
+
+    main {
+        padding-top: 80px; 
+    }
+body > header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1000;
+}
+    .pricing {
+        display: flex;
+       
+    }
+    
+
+    .card{
+        flex: 0 0 275px;
+        display: row;
+        
+    }
+    .card h4{
+        white-space: nowrap;
+
+    }
+    .card li header{
+        padding: 0;
+    }
+
+
+   
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none; 
+        transition: none; 
+    }
+}
+
+
+@media print{
+
+    body{
+        background-image: none;
+        font-family: Arial, Helvetica;
+    }
+  
+   
+    nav{
+        width: 100%;
+        justify-content: center; 
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav_links {
+        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-evenly; 
+    }
+
+    main {
+        padding-top: 20px; 
+    }
+
+    .pricing {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+      
+    }
+    
+    .card{
+        flex-basis: 325px;
+        display: row;
+        justify-content: flex-end;
+        border: solid 2px #45ADDD;
+        padding: 0 0 15px 0;
+        
+         
+        
+        
+    }
+   
+    .card li header{
+        padding: 0;
+    }
+
+    #gallery{
+        padding-top: 30px;
+        visibility: hidden;
+        
+    }
+    .gallery{
+        display: none
+    }
+
+    .card ul li:nth-child(2)::after {
+        content: "👍 ";
+       
+    }
+
+
+
+
+   
+}
