@@ -115,7 +115,7 @@ body > header {
 
     .card{
         flex: 0 0 275px;
-        display: row;
+  
         
     }
     .card h4{
@@ -173,7 +173,6 @@ body > header {
     
     .card{
         flex-basis: 325px;
-        display: row;
         justify-content: flex-end;
         border: solid 2px #45ADDD;
         padding: 0 0 15px 0;
